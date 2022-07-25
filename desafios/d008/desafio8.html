@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Desafio 8</title>
+    <style>
+      body {
+        font: normal 14pt Arial;
+        margin: 10px;
+      }
+      input {
+        padding: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Desafio Calcular Desconto</h1>
+    <input type="button" value="Desconto de 10%" onclick="clicar()" />
+    <div id="desconto"></div>
+    <script>
+      function clicar() {
+        var produto = window.prompt('Qual o nome do produto?')
+        var preço = Number(window.prompt(`Qual o preço de ${produto}?`))
+        var desconto = preço*0.1
+
+        var total = window.document.querySelector('div#desconto')
+        total.innerHTML = `<h2>Calculando desconto de 10% para ${produto}...</h2>`
+        total.innerHTML += `<p>Subtotal do produto: ${preço.toLocaleString('pt-BR',{style:'currency', currency: 'BRL'})}</p>`
+        total.innerHTML += `<p>Desconto: -${desconto.toLocaleString('pt-BR',{style:'currency', currency: 'BRL'})}</p>`
+        total.innerHTML += `<p>Pagamento total: ${(preço-desconto).toLocaleString('pt-BR',{style:'currency', currency: 'BRL'})}</p>`
+      }
+    </script>
+  </body>
+</html>
