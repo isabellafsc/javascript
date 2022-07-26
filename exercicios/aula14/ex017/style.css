@@ -16,6 +16,10 @@ section {
   border-radius: 10px;
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
 }
+select {
+  margin-top: 15px;
+  padding:5px;
+}
 
 footer {
   font-style: italic;
