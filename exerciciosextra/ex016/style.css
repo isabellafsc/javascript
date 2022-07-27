@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Merienda&display=swap');
+
+body {
+  font: 14pt Arial;
+}
+h1, h2, h3 {
+  font-family: 'Merienda', cursive;
+}
+button {
+  font-size: 14pt;
+  padding: 20px;
+}

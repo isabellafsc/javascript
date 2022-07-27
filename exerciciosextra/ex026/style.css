@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Merienda&display=swap');
+
+body {
+  font: 14pt Arial;
+}
+h1, h2, h3 {
+  font-family: 'Merienda', cursive;
+}
+input[type='number'] {
+  font-size: 12pt;
+  width: 150px;
+}
+input[type='submit'] {
+  background-color: blue;
+  color: white;
+  font-size: 12pt;
+  padding: 5px;
+}
