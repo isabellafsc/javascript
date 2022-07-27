@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Desafio 12</title>
+    <style>
+      body {
+        font: normal 14pt Arial;
+        margin: 10px;
+      }
+      input {
+        padding: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Desafio Preço antes, preço depois</h1>
+    <input type="button" value="Verificar" onclick="clicar()" />
+    <div id="res">Clique no botão acima para analisar a mudança de preço.</div>
+    <script>
+      function clicar() {
+        var antes = window.prompt('Qual era o preço anterior do produto?')
+        var depois = window.prompt('Qual é o preço atual do produto?')
+        res.innerHTML = `<h2>Analisando os valores informados...</h2>`
+        res.innerHTML += `<p>O produto custava ${Number(antes).toLocaleString('pt-BR',{style:'currency', currency: 'BRL'})} e agora custa ${Number(depois).toLocaleString('pt-BR',{style:'currency', currency: 'BRL'})}.</p>`
+
+        if (Number(antes) > Number(depois)) {
+          res.innerHTML += `<p>O produto está mais barato.</p>`
+          res.innerHTML += `<p>O preço caiu ${(antes-depois).toLocaleString('pt-BR',{style:'currency', currency: 'BRL'})} em relação ao preço anterior.</p>`
+          res.innerHTML += `<p>Uma variação de ${(((antes-depois)*100)/antes)}% para baixo.</p>`
+        } else if (Number(antes) < Number(depois)) {
+          res.innerHTML += `<p>O produto está mais caro.</p>`
+          res.innerHTML += `<p>O preço subiu ${(depois - antes).toLocaleString('pt-BR',{style:'currency', currency: 'BRL'})} em relação ao preço anterior.</p>`
+          res.innerHTML += `<p>Uma variação de ${(((depois - antes)*100)/antes)}% para cima.</p>`
+        } else {
+          res.innerHTML += `<p>Não teve alteração no preço do produto.</p>`
+        }
+      }
+    </script>
+  </body>
+</html>
